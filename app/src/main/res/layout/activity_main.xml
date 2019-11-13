@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/open_activity2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open activity2"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"/>
+
+    <EditText
+        android:id="@+id/transfert_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/open_activity2_button"
+        android:stateListAnimator="@null"/>
+    <Button
+        android:id="@+id/transfert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/transfert_editText"
+        android:stateListAnimator="@null"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open activity3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/transfert_button"
+        android:id="@+id/open_activity3_button"/>
+
+</RelativeLayout>

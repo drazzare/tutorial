@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/showButton_constraintLayout">
+            <Button
+                android:id="@+id/custom_toast_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="show toast"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/snackbar_button"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/snackbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="show snackbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/editText_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:layout_below="@+id/showButton_constraintLayout"/>
+        <EditText
+            android:id="@+id/editText_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message"
+            android:layout_below="@id/editText_title"/>
+        <Button
+            android:id="@+id/button_channel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send on chanel 1"
+            android:layout_below="@id/editText_message"/>
+        <Button
+            android:id="@+id/button_channel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send on chanel 2"
+            android:layout_below="@id/editText_message"
+            android:layout_toRightOf="@id/button_channel1"/>
+        <TextView
+            android:id="@+id/savedText_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here will be our text"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/button_channel2"/>
+        <EditText
+            android:id="@+id/inputText_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savedText_Textview"/>
+        <LinearLayout
+            android:id="@+id/save_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputText_EditText"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/apllyText_Button"
+                android:layout_weight=".3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="apply text"
+                android:layout_centerHorizontal="true"/>
+            <Switch
+                android:id="@+id/saveinput_Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight=".3"/>
+            <Button
+                android:id="@+id/saveButton_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_centerHorizontal="true"
+                android:layout_weight=".3"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/countdown_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            tools:text="10:00"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/save_layout"/>
+
+        <Button
+            android:id="@+id/countdown_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start"
+            android:layout_below="@id/countdown_text"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/counter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="60sp"
+            android:layout_below="@id/countdown_button"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/counter_text"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/counter_button"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="open dialog"
+                android:layout_width="0dp" />
+            <Button
+                android:id="@+id/increment_button"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/counter_button"
+                android:layout_centerHorizontal="true"
+                android:text="increment counter"
+                android:layout_width="0dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
