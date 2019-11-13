@@ -13,16 +13,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import ch.pandamurai.tutorial.ui.main.DepthPageTransformer;
 import ch.pandamurai.tutorial.ui.main.SectionsPagerAdapter;
+import ch.pandamurai.tutorial.ui.main.ZoomOutPageTransformer;
 
 public class MainActivity3 extends AppCompatActivity {
+
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.view_pager);
+        viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
@@ -35,5 +40,16 @@ public class MainActivity3 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        getSupportActionBar().setTitle("Activity 3");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(viewPager.getCurrentItem()==0) {
+            super.onBackPressed();
+        } else{
+            viewPager.setCurrentItem(viewPager.getCurrentItem() -1);
+        }
     }
 }

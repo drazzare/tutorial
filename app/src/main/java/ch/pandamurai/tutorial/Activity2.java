@@ -154,7 +154,8 @@ public class Activity2 extends AppCompatActivity implements ExampleDialog.Exampl
                 showCustomToast();
             }
         });
-
+        getSupportActionBar().setTitle("Activity 2");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
