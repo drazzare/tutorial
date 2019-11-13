@@ -1,19 +1,14 @@
 package ch.pandamurai.tutorial;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import ch.pandamurai.tutorial.ui.main.DepthPageTransformer;
+import androidx.viewpager.widget.ViewPager;
 import ch.pandamurai.tutorial.ui.main.SectionsPagerAdapter;
 import ch.pandamurai.tutorial.ui.main.ZoomOutPageTransformer;
 
@@ -42,7 +37,11 @@ public class MainActivity3 extends AppCompatActivity {
         });
         getSupportActionBar().setTitle("Activity 3");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
+
+
 
     @Override
     public void onBackPressed() {
