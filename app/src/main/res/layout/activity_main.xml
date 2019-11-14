@@ -14,6 +14,13 @@
         android:text="open activity2"
         android:layout_centerHorizontal="true"
         android:stateListAnimator="@null"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/open_recicler_activity"
+        android:text="Open Recicler View"
+        android:layout_below="@id/image_battery"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:id="@+id/transfert_editText"

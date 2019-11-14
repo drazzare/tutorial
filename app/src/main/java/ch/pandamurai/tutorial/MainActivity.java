@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
     private Button openActivity2Button;
     private Button openActivity3Button;
+    private Button openReciclerViewButton;
 
     private long  backPressedTime;
     private Toast backToast;
@@ -60,6 +61,18 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         ImageView imageView = findViewById(R.id.image_battery);
         imageView.setBackgroundResource(R.drawable.animation_battery);
         batteryAnimationDrawable = (AnimationDrawable) imageView.getBackground();
+        openReciclerViewButton = findViewById(R.id.open_recicler_activity);
+        openReciclerViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openReciclerView();
+            }
+        });
+    }
+
+    private void openReciclerView() {
+        Intent reciclerIntent = new Intent(this, ReciclerActivity.class);
+        startActivity(reciclerIntent);
     }
 
     @Override
