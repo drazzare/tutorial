@@ -23,12 +23,21 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
-        android:id="@+id/transfert_editText"
+        android:id="@+id/transfert_editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_below="@id/open_activity2_button"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/transfert_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/transfert_editText2"
         android:stateListAnimator="@null"/>
     <Button
         android:id="@+id/transfert_button"
@@ -55,5 +64,11 @@
         android:layout_height="250dp"
         android:layout_below="@+id/open_activity3_button"
         android:layout_centerHorizontal="true"/>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/open_activity4_button"
+        android:layout_below="@id/open_recicler_activity"
+        android:text="open activity 4"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

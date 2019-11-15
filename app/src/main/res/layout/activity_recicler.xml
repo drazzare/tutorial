@@ -12,5 +12,44 @@
         android:padding="4dp"
         android:background="@android:color/darker_gray"
         android:scrollbars="vertical"
-        android:id="@+id/recyclerView"/>
+        android:id="@+id/recyclerView"
+        android:layout_marginBottom="100dp"/>
+    <EditText
+        android:id="@+id/editText_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/insert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="insert"
+        android:layout_toRightOf="@+id/editText_insert"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"/>
+
+    <EditText
+        android:id="@+id/editText_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"
+        android:layout_toRightOf="@+id/insert_button"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove"
+        android:layout_toRightOf="@+id/editText_remove"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"/>
 </RelativeLayout>

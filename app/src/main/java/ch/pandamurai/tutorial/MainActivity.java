@@ -16,6 +16,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener{
 
+    public static final String EXTRA_TEXT = "ch.pandamurai.tutorial.EXTRA_TEXT";
+    public static final String EXTRA_NUMBER = "ch.pandamurai.tutorial.EXTRA_NUMBER";
     private AnimationDrawable batteryAnimationDrawable;
 
     private FrameLayout fragmentContainer;
@@ -68,6 +70,24 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 openReciclerView();
             }
         });
+        Button button = findViewById(R.id.open_activity4_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity4();
+            }
+        });
+    }
+
+    private void openActivity4() {
+        EditText editText1 = findViewById(R.id.transfert_editText);
+        EditText editText2 = findViewById(R.id.transfert_editText2);
+        String text = editText1.getText().toString();
+        int number = Integer.parseInt(editText2.getText().toString());
+        Intent intent = new Intent(this, Activity4.class);
+        intent.putExtra(EXTRA_TEXT, text);
+        intent.putExtra(EXTRA_NUMBER, number);
+        startActivity(intent);
     }
 
     private void openReciclerView() {
